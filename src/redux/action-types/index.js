@@ -1,0 +1,23 @@
+// user login action types
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const FAILED_TO_LOGIN = "FAILED_TO_LOGIN";
+
+export const GET_ALL_USERS = "GET_ALL_USERS";
+export const GET_SINGLE_USER = "GET_SINGLE_USER";
+
+export const FAILED_TO_GET_ALL_USERS = "FAILED_TO_GET_ALL_USERS";
+export const FAILED_TO_GET_SINGLE_USER = "FAILED_TO_GET_SINGLE_USER";
+
+export const CREATE_USER = "CREATE_USER";
+export const FAILED_TO_CREATE_USER = "FAILED_CREATE_USER";
+
+export const GET_USER_ROLES = "GET_USER_ROLES";
+export const FAILED_TO_GET_USER_ROLES = "FAILED_TO_GET_USER_ROLES";
+
+export const EDIT_USER = "EDIT_USER";
+export const FAILED_TO_EDIT_USER = "FAILED_TO_EDIT_USER";
+
+
+export const GET_USER_SINGLE_ROLE = "GET_USER_ROLE";
+export const FAILED_TO_GET_USER_SINGLE_ROLE = "FAILED_TO_GET_USER_ROLE";
+

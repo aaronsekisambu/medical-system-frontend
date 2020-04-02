@@ -1,0 +1,15 @@
+
+          @media all  and (max-width: 425px) and (min-width: 320px) {
+            .navigation {
+              display: flex;
+              flex-direction: column;
+              width: none;
+              background: blue;
+            }
+          }
+
+          @media  screen and (max-width: 600px) {
+            body {
+              background-color: lightblue;
+            }
+          }

@@ -1,0 +1,5 @@
+export const GET_STATES = "GET_STATES";
+export const FAILED_TO_GET_STATES = "FAILED_TO_GET_STATES";
+
+export const GET_STATE = "GET_STATE";
+export const FAILED_TO_GET_STATE = "FAILED_TO_GET_STATE";
