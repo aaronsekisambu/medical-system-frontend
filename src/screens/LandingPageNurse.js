@@ -118,7 +118,6 @@ class LandingPageNurse extends Component {
             width: 300px;
             height: 200px;
             object-fit: cover;
-            display: contents;
           }
           .one-card:hover {
             transform: scale(1.05);
@@ -133,8 +132,8 @@ class LandingPageNurse extends Component {
           }
           .card-info,
           .card-info-two {
-            background-color: #248c01;
-            color: white;
+            background-color: white;
+            color: black;
             text-align: center;
             padding: 1px;
             font-size: 18px;
@@ -148,8 +147,7 @@ class LandingPageNurse extends Component {
           }
 
           .card-info-two {
-            background: #01598c;
-            animation-name: example;
+            background: #ffc10742;
             animation-duration: 20s;
             animation-iteration-count: infinite;
             animation-direction: alternate-reverse;

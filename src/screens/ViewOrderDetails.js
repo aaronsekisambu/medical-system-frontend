@@ -114,7 +114,7 @@ class ViewOrderDetails extends Component {
                   </tr>
                   <tr>
                     <td>Order Total :</td>
-                    <td>₹ 5495.00</td>
+                    <td>shs 5495.00</td>
                   </tr>
                 </tbody>
               </table>
@@ -129,27 +129,27 @@ class ViewOrderDetails extends Component {
                 <tbody>
                   <tr>
                     <td>Items :</td>
-                    <td>₹ 749.00</td>
+                    <td>shs 749.00</td>
                   </tr>
                   <tr>
                     <td>Total before Tax :</td>
-                    <td>₹ 749.00</td>
+                    <td>shs 749.00</td>
                   </tr>
                   <tr>
                     <td>Tax :</td>
-                    <td>₹ 250.00 </td>
+                    <td>shs 250.00 </td>
                   </tr>
                   <tr>
                     <td>Total :</td>
-                    <td>₹ 999.00</td>
+                    <td>shs 999.00</td>
                   </tr>
                   <tr>
                     <td>Discount :</td>
-                    <td>₹ {order ? order.order.service.discount : null}%</td>
+                    <td>shs {order ? order.order.service.discount : null}%</td>
                   </tr>
                   <tr style={{ fontWeight: "bolder" }}>
                     <td>Order Total :</td>
-                    <td>₹ 999.00</td>
+                    <td>shs 999.00</td>
                   </tr>
                 </tbody>
               </table>

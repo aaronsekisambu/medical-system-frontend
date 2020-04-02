@@ -8,8 +8,8 @@ function MaterialCardWithImageAndTitle12(props) {
         <BodyContent>
           <TitleStyle>Order Summary</TitleStyle>
           <SubtitleStyle>
-            Items : ₹ 749.00{"\n"}Total before Tax : ₹ 749.00{"\n"}Tax : ₹
-            250.00{"\n"}Total : ₹ 999.00{"\n"}Discount : ₹ 0.00
+            Items : shs 749.00{"\n"}Total before Tax : shs 749.00{"\n"}Tax : shs
+            250.00{"\n"}Total : shs 999.00{"\n"}Discount : shs 0.00
           </SubtitleStyle>
         </BodyContent>
       </CardBody>
@@ -19,15 +19,15 @@ function MaterialCardWithImageAndTitle12(props) {
 
 const Container = styled.div`
   display: flex;
-  background-color: #FFF;
+  background-color: #fff;
   flex-wrap: nowrap;
   border-radius: 2px;
-  border-color: #CCC;
+  border-color: #ccc;
   border-width: 1px;
   overflow: hidden;
   flex-direction: column;
   border-style: solid;
-  box-shadow: -2px 2px 1.5px  0.1px #000 ;
+  box-shadow: -2px 2px 1.5px 0.1px #000;
 `;
 
 const CardBody = styled.div`

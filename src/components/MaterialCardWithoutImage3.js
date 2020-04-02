@@ -6,8 +6,8 @@ function MaterialCardWithoutImage3(props) {
     <Container {...props}>
       <Body2>
         <BodyText>
-          MRP Total : ₹ 1099.00{"\n"}Discount : 10%{"\n"}Quantity : 5{"\n"}MRP
-          Total : ₹ 5495.00 {"\n"}To be Paid : ₹ 4945.00
+          MRP Total : shs 1099.00{"\n"}Discount : 10%{"\n"}Quantity : 5{"\n"}MRP
+          Total : shs 5495.00 {"\n"}To be Paid : shs 4945.00
         </BodyText>
       </Body2>
     </Container>
@@ -16,15 +16,15 @@ function MaterialCardWithoutImage3(props) {
 
 const Container = styled.div`
   display: flex;
-  background-color: #FFF;
+  background-color: #fff;
   flex-wrap: nowrap;
   border-radius: 2px;
-  border-color: #CCC;
+  border-color: #ccc;
   border-width: 1px;
   overflow: hidden;
   flex-direction: column;
   border-style: solid;
-  box-shadow: -2px 2px 1.5px  0.1px #000 ;
+  box-shadow: -2px 2px 1.5px 0.1px #000;
 `;
 
 const Body2 = styled.div`

@@ -98,13 +98,15 @@ class Description extends Component {
                   <h4 className="card-info-title">{service.service.title}</h4>
                   <p>
                     <span className="price-now">
-                      ₹
+                      shs
                       {calculateDiscount(
                         service.service.price,
                         service.service.discount
                       )}
                     </span>
-                    <span className="old-price">₹ {service.service.price}</span>
+                    <span className="old-price">
+                      shs {service.service.price}
+                    </span>
                   </p>
                   <div className="card-discount">
                     {service.service.discount}% off
@@ -125,10 +127,10 @@ class Description extends Component {
                   <p className="d-details">{service.service.description}</p>
                 </div>
               </div>
-          <button className="select-section">
-            <span>Have any Questions? Contact us</span>
-            <i className="zmdi zmdi-chevron-right"></i>
-          </button>
+              <button className="select-section">
+                <span>Have any Questions? Contact us</span>
+                <i className="zmdi zmdi-chevron-right"></i>
+              </button>
             </section>
           ) : null}
         </div>

@@ -14,8 +14,8 @@ function MaterialCardWithImageAndTitle13(props) {
         ></CardItemImagePlace>
       </CardBody>
       <LoremIpsumStack>
-        <LoremIpsum>₹ 1099</LoremIpsum>
-        <Text>₹ 1599</Text>
+        <LoremIpsum>shs 1099</LoremIpsum>
+        <Text>shs 1599</Text>
       </LoremIpsumStack>
       <MaterialButtonDanger4
         style={{
@@ -32,16 +32,16 @@ function MaterialCardWithImageAndTitle13(props) {
 
 const Container = styled.div`
   display: flex;
-  background-color: #FFF;
+  background-color: #fff;
   flex-wrap: nowrap;
   border-radius: 2px;
-  border-color: #CCC;
+  border-color: #ccc;
   border-width: 1px;
   overflow: hidden;
   flex-direction: column;
   border-style: solid;
   position: relative;
-  box-shadow: -2px 2px 1.5px  0.1px #000 ;
+  box-shadow: -2px 2px 1.5px 0.1px #000;
 `;
 
 const CardBody = styled.div`
@@ -78,7 +78,7 @@ const LoremIpsum = styled.span`
   left: 0px;
   width: 101px;
   height: 15px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   font-size: 16px;
   font-weight: regular;
@@ -92,7 +92,7 @@ const Text = styled.span`
   left: 58px;
   width: 101px;
   height: 15px;
-  color: rgba(155,155,155,1);
+  color: rgba(155, 155, 155, 1);
   position: absolute;
   font-size: 14px;
   font-weight: regular;

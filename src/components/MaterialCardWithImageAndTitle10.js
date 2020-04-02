@@ -9,7 +9,7 @@ function MaterialCardWithImageAndTitle10(props) {
           <TitleStyle></TitleStyle>
           <SubtitleStyle>
             Order date : 25-Jan-2020{"\n"}Order # : 04392385280564280653{"\n"}
-            Order total : ₹ 999.00
+            Order total : shs 999.00
           </SubtitleStyle>
         </BodyContent>
       </CardBody>
@@ -19,15 +19,15 @@ function MaterialCardWithImageAndTitle10(props) {
 
 const Container = styled.div`
   display: flex;
-  background-color: #FFF;
+  background-color: #fff;
   flex-wrap: nowrap;
   border-radius: 2px;
-  border-color: #CCC;
+  border-color: #ccc;
   border-width: 1px;
   overflow: hidden;
   flex-direction: column;
   border-style: solid;
-  box-shadow: -2px 2px 1.5px  0.1px #000 ;
+  box-shadow: -2px 2px 1.5px 0.1px #000;
 `;
 
 const CardBody = styled.div`

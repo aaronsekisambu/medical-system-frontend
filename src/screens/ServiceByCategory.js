@@ -109,10 +109,13 @@ class ServiceByCategory extends Component {
                         <h4 className="card-info-title">{service.title}</h4>
                         <p>
                           <span className="price-now">
-                            ₹
+                            shs
                             {calculateDiscount(service.price, service.discount)}
                           </span>
-                          <span className="old-price"> ₹ {service.price}</span>
+                          <span className="old-price">
+                            {" "}
+                            shs {service.price}
+                          </span>
                         </p>
                         <div className="card-discount">
                           {service.discount}% off
@@ -140,7 +143,7 @@ class ServiceByCategory extends Component {
               ))
             )
           ) : null}
-          <div className="footer">
+          {/* <div className="footer">
             <div className="footer-items">
               {categories
                 ? categories.categories.map(category => (
@@ -159,7 +162,7 @@ class ServiceByCategory extends Component {
                   ))
                 : null}
             </div>
-          </div>
+          </div> */}
         </div>
         <style jsx>{`
           a {

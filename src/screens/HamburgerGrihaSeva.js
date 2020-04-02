@@ -127,17 +127,15 @@ class HamburgerGrihaSeva extends Component {
           .one-card,
           .two-card {
             background: white;
-            -webkit-box-shadow: 0px 0px 4px 0px #777;
-            -moz-box-shadow: 0px 0px 4px 0px #777;
-            box-shadow: 0px 0px 4px 0px #777;
-            width: 300px;
-            margin: 0.2em;
+            text-align: center;
+            border: 1px solid #bebebe;
+            border-radius: 5px;
+            padding: 1.4em;
+            margin: 0.5em;
           }
           .one-card img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            display: contents;
+            height: 60px;
+            border-radius: 203px;
           }
           .one-card:hover {
             transform: scale(1.05);
@@ -152,34 +150,29 @@ class HamburgerGrihaSeva extends Component {
           }
           .card-info,
           .card-info-two {
-            background-color: #248c01;
-            color: white;
+            background-color: white;
+            color: black;
             text-align: center;
             padding: 1px;
+            border-radius: 5px;
             font-size: 18px;
-            text-transform: capitalize;
-            animation-name: example;
-            animation-duration: 15s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate-reverse;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: both;
           }
 
           .card-info-two {
-            background: #01598c;
-            animation-name: example;
+            background: white;
             animation-duration: 20s;
             animation-iteration-count: infinite;
             animation-direction: alternate-reverse;
             animation-timing-function: ease-in-out;
             animation-fill-mode: both;
+            font-weight: lighter;
           }
 
           .main {
             font-size: 28px; /* Increased text to enable scrolling */
           }
-          @keyframes example {
+           {
+            /* @keyframes example {
             0% {
               background-color: #01738c;
             }
@@ -192,6 +185,7 @@ class HamburgerGrihaSeva extends Component {
             100% {
               background-color: #248c01;
             }
+          } */
           }
         `}</style>
       </Fragment>

@@ -13,23 +13,23 @@ function MaterialCardWithImageAndTitle15(props) {
           src={require("../assets/images/pill.png")}
         ></CardItemImagePlace>
       </CardBody>
-      <LoremIpsum1>₹ 199</LoremIpsum1>
+      <LoremIpsum1>shs 199</LoremIpsum1>
     </Container>
   );
 }
 
 const Container = styled.div`
   display: flex;
-  background-color: #FFF;
+  background-color: #fff;
   flex-wrap: nowrap;
   border-radius: 2px;
-  border-color: #CCC;
+  border-color: #ccc;
   border-width: 1px;
   overflow: hidden;
   flex-direction: column;
   border-style: solid;
   position: relative;
-  box-shadow: -2px 2px 1.5px  0.1px #000 ;
+  box-shadow: -2px 2px 1.5px 0.1px #000;
 `;
 
 const CardBody = styled.div`
@@ -55,7 +55,7 @@ const TitleStyle = styled.span`
 
 const SubtitleStyle = styled.span`
   font-family: Roboto;
-  color: rgba(44,43,156,1);
+  color: rgba(44, 43, 156, 1);
   opacity: 0.5;
   font-size: 14px;
   line-height: 16px;
@@ -74,7 +74,7 @@ const LoremIpsum1 = styled.span`
   left: 18px;
   width: 101px;
   height: 15px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   font-size: 16px;
   font-weight: regular;

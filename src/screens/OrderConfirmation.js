@@ -53,12 +53,12 @@ class OrderConfirmation extends Component {
     const { user, get_product_allocation, schedules_by_user } = this.props;
     if (user !== prevProps.user) {
       get_product_allocation(token, user.user.product_allocation.id);
-      const combineSchedules = schedules_by_user.schedules
-        .map(d => d.schedules.map(s => `${d.day} ${s}`))
-        .reduce((acc, val) => acc.concat(val), []);
-      const schedule_ids = schedules_by_user.schedules.map(id => id.id);
-      this.setState({ currentSelectedSchedules_ids: schedule_ids });
-      this.setState({ user_schedules: combineSchedules });
+      // const combineSchedules = schedules_by_user.schedules
+      //   .map(d => d.schedules.map(s => `${d.day} ${s}`))
+      //   .reduce((acc, val) => acc.concat(val), []);
+      // const schedule_ids = schedules_by_user.schedules.map(id => id.id);
+      // this.setState({ currentSelectedSchedules_ids: schedule_ids });
+      // this.setState({ user_schedules: combineSchedules });
     }
   }
 
@@ -101,11 +101,7 @@ class OrderConfirmation extends Component {
   };
   render() {
     const { user, service, service_error, allocations } = this.props;
-    const {
-      clickHamburger,
-      width,
-      user_schedules
-    } = this.state;
+    const { clickHamburger, width, user_schedules } = this.state;
     return (
       <Fragment>
         {user ? (
@@ -135,14 +131,14 @@ class OrderConfirmation extends Component {
                     <h4 className="card-info-title">{service.service.title}</h4>
                     <p>
                       <span className="price-now">
-                        ₹
+                        shs
                         {calculateDiscount(
                           service.service.price,
                           service.service.discount
                         )}
                       </span>
                       <span className="old-price">
-                        ₹ {service.service.price}
+                        shs {service.service.price}
                       </span>
                     </p>
                     <div className="card-discount">
@@ -175,7 +171,7 @@ class OrderConfirmation extends Component {
                       <tr>
                         <td>MRP Total :</td>
                         <td>
-                          ₹
+                          shs
                           {calculateTotal(
                             service.service.price,
                             user_schedules.length
@@ -185,7 +181,7 @@ class OrderConfirmation extends Component {
                       <tr>
                         <td>To be Paid :</td>
                         <td>
-                          ₹
+                          shs
                           {calculateDiscount(
                             calculateTotal(
                               service.service.price,
@@ -198,7 +194,7 @@ class OrderConfirmation extends Component {
                       <tr style={{ border: "1px solid grey", color: "green" }}>
                         <td>Total Savings:</td>
                         <td>
-                          ₹
+                          shs
                           {calculateSavings(
                             calculateTotal(
                               service.service.price,
@@ -281,7 +277,7 @@ class OrderConfirmation extends Component {
                   <div className="total-payable">
                     <p className="payable">Total Payable</p>
                     <p className="amount-paid">
-                      ₹
+                      shs
                       {calculateDiscount(
                         calculateTotal(
                           service.service.price,

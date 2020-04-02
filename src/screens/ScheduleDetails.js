@@ -92,14 +92,14 @@ class ScheduleDetails extends Component {
   };
   am = e => {
     e.preventDefault();
-    this.setState({amToPm: "AM"})
-  }
+    this.setState({ amToPm: "AM" });
+  };
   pm = e => {
     e.preventDefault();
-    this.setState({amToPm: "PM"})
-  }
+    this.setState({ amToPm: "PM" });
+  };
 
-  addSchedule = async(e) => {
+  addSchedule = async e => {
     const {
       schedule,
       date,
@@ -129,12 +129,14 @@ class ScheduleDetails extends Component {
           maxSchedules:
             "You can not schedule the same date and time twice, please select a different date"
         })
-       : schedules_by_user.length >= 7 ? this.setState({
-        maxSchedules: "You have reached the maximum number of schedules!!"
-      }) : schedule.push(time) &&
+      : schedules_by_user.length >= 7
+      ? this.setState({
+          maxSchedules: "You have reached the maximum number of schedules!!"
+        })
+      : schedule.push(time) &&
         selectedDay.push(day) &&
-        await create_schedule(token, day, time) &&
-        this.setState({ maxSchedules: "" })
+        (await create_schedule(token, day, time)) &&
+        this.setState({ maxSchedules: "" });
   };
   removeSchedule = (e, id) => {
     const token = localStorage.getItem("token");
@@ -142,21 +144,21 @@ class ScheduleDetails extends Component {
     const { delete_schedule_by_user, schedules_by_user } = this.props;
     e.preventDefault();
     // selectedSchedules.splice(i, 1);
-    delete_schedule_by_user(token, id)
-    console.log("schedules_by_user ===========>", schedules_by_user )
-    this.setState({  maxSchedules: "" });
+    delete_schedule_by_user(token, id);
+    console.log("schedules_by_user ===========>", schedules_by_user);
+    this.setState({ maxSchedules: "" });
   };
   openModal = () => this.setState({ isModalOpen: true });
   closeModal = () => this.setState({ isModalOpen: false });
   orderConfirmation = e => {
     const { selectedSchedules } = this.state;
     e.preventDefault();
-    selectedSchedules.length === 0
-      ? this.setState({
-          maxSchedules:
-            "You have not added any schedule, please select the calendar icon to choose a date a sort the time from the time selector below the calendar."
-        })
-      : this.setState({ isModalOpen: true });
+    // selectedSchedules.length === 0
+    //   ? this.setState({
+    //       maxSchedules:
+    //         "You have not added any schedule, please select the calendar icon to choose a date a sort the time from the time selector below the calendar."
+    //     })
+       this.setState({ isModalOpen: true });
   };
   confirm = () => {
     const token = localStorage.getItem("token");
@@ -171,12 +173,12 @@ class ScheduleDetails extends Component {
     const { schedule, date, selectedDay } = this.state;
     console.log(schedule, date, selectedDay);
     const day = removeTimeFromDate(date);
-    // delete_schedule_by_user(token, )
-    // history.push(
-    //   `/ServiceByCategory/${convertTextToSlug(type)}/${id}/${convertTextToSlug(
-    //     title
-    //   )}/${service_id}/confirmAddress/ScheduleDetails/OrderConfirmation`
-    // );
+    delete_schedule_by_user(token, )
+    history.push(
+      `/ServiceByCategory/${convertTextToSlug(type)}/${id}/${convertTextToSlug(
+        title
+      )}/${service_id}/confirmAddress/ScheduleDetails/OrderConfirmation`
+    );
   };
   render() {
     const { user, schedules_by_user, posted_schedules_by_user } = this.props;
@@ -323,7 +325,10 @@ class ScheduleDetails extends Component {
               {maxSchedules}
             </div>
           </section>
-          <SelectedSchedules selectedSchedules={schedules_by_user} removeSchedule={this.removeSchedule} />
+          <SelectedSchedules
+            selectedSchedules={schedules_by_user}
+            removeSchedule={this.removeSchedule}
+          />
           <button
             className="add-schedule confirm"
             onClick={e => this.orderConfirmation(e)}
@@ -623,7 +628,7 @@ class ScheduleDetails extends Component {
 
 const mapsStateToProps = state => ({
   user: state.authentication.single_user,
-  schedules_by_user: state.schedules.schedule_by_user,
+  schedules_by_user: state.schedules.schedule_by_user
 });
 
 export default connect(mapsStateToProps, {
